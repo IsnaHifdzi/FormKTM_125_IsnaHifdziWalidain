@@ -25,6 +25,9 @@ public class idCardController {
     @RequestMapping("/getKtm")
     public String getData(@RequestParam("nama") String nama,
                           @RequestParam("tanggal")@DateTimeFormat(pattern = "yyyy-MM-dd") Date date,
+                          @RequestParam("nim")String nim,
+                          @RequestParam("jurusan") String jurusan,
+                          
                           @RequestParam("gambar") MultipartFile image,
                           Model model) throws IOException{
         
@@ -35,6 +38,9 @@ public class idCardController {
         String gambar = "data:image/jpeg;base64,".concat(blob);
         
         model.addAttribute("nama", nama);
+        model.addAttribute("nim", nim);
+        model.addAttribute("jurusan", jurusan);
+        
         model.addAttribute("tanggal", tanggal);
         model.addAttribute("gambar", gambar);
         

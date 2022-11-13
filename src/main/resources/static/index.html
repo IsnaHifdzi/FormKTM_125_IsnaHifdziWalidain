@@ -9,21 +9,46 @@ and open the template in the editor.
         <title>KTM | Project PWS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            fieldset{
+                box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 500px; 
+                margin: auto; 
+                text-align: justify;
+                background-image: url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?size=626&ext=jpg&ga=GA1.2.1829714128.1668325822');
+            }
+            #sub{
+                float: right;
+            }
+            p,h2{         
+                font-family: serif; 
+            }
+            
+            
+        </style>
     </head>
     <body>
-        <div>Input KTM</div>
         
-        <!-- Bikin Template sendiri ya isna -->
+        <fieldset >
         
-        <form action="/getKtm" method="post" enctype="multipart/form-data">
-            <input type="text" name="nama" placeholder="Masukkan nama"/>
-            <p></p>
-            <input type="date" name="tanggal"/>
-            <p></p>
-            <input type="file" name="gambar"/>
-            <p></p>
-            <input type="submit" value="SUBMIT"/>
-        </form>
-        
+            <form action="/getKtm" method="post" enctype="multipart/form-data">
+                <h2 align ="center"> Masukan Data KTM</h2>
+                <p>Nama : <input type="text" name="nama" placeholder="Masukkan nama"/>
+                <p></p>
+                <p>NIM : <input type="text" name="nim" placeholder="Masukkan nim"/>
+                <p></p>
+                <p>Jurusan : <input type="text" name="jurusan" placeholder="Masukkan jurusan"/>
+                <p></p>
+                <p>Tanggal Lahir : <input type="date" name="tanggal"/>
+                <p></p>
+                Foto KTM : <input type="file" name="gambar"/>
+                
+                <p></p>
+                <div id="sub">
+                    <input type="submit" value="SUBMIT"/>
+                </div>
+                
+            </form>
+         </fieldset>
     </body>
 </html>

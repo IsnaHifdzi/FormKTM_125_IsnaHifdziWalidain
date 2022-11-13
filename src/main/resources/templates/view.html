@@ -9,14 +9,41 @@ and open the template in the editor.
         <title>Tampilan KTM | Project PWS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            img{
+             box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2); 
+             max-width: 700px; 
+             margin: auto; 
+             text-align: justify; 
+             float: right;
+             display:block;
+             width:200px;
+             clear:both;
+             margin:5px;
+            }
+            fieldset{
+                box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2); 
+                max-width: 500px; 
+                margin: auto; 
+                text-align: justify;
+                background-image: url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?size=626&ext=jpg&ga=GA1.2.1829714128.1668325822');
+            }
+        </style>
     </head>
     <body>
-        <div>Tampilan KTM</div>
+        <fieldset>
+            <h3 align = "center">Kartu Tanda Mahasiswa</h3>
         
         <!-- Bagian Dolar sesuaikan sama yang di model di controller 
         Tampilan bikin sendiri oke-->
+        <img th:src="${gambar}" />
         <p th:text="${nama}"></p>
+        <p th:text="${nim}"></p>
+        <p th:text="${jurusan}"></p>
+        <span th:text="${nama}"></span><span>@mail.umy.ac.id</span>
         <p th:text="${tanggal}"></p>
-        <img th:src="${gambar}"/>
+       
+        </fieldset>
+        
     </body>
 </html>
